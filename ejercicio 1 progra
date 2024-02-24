@@ -1,0 +1,102 @@
+#include <iostream>
+
+int main() {
+  int edad, num1, num2, numero, dia;
+
+  // Mayor de edad
+  std::cout << "Introduzca su edad: ";
+  std::cin >> edad;
+
+  if (edad >= 18) {
+    std::cout << "Eres mayor de edad." << std::endl;
+  } else {
+    std::cout << "Eres menor de edad." << std::endl;
+  }
+
+  // Número mayor
+  std::cout << "\nIntroduzca el primer número: ";
+  std::cin >> num1;
+
+  std::cout << "Introduzca el segundo número: ";
+  std::cin >> num2;
+
+  if (num1 > num2) {
+    std::cout << "El número mayor es " << num1 << std::endl;
+  } else if (num2 > num1) {
+    std::cout << "El número mayor es " << num2 << std::endl;
+  } else {
+    std::cout << "Los números son iguales." << std::endl;
+  }
+
+  // Par o impar
+  std::cout << "\nIntroduzca un número: ";
+  std::cin >> numero;
+
+  if (numero % 2 == 0) {
+    std::cout << "El número es par." << std::endl;
+  } else {
+    std::cout << "El número es impar." << std::endl;
+  }
+
+  // Factorial
+  std::cout << "\nIntroduzca un número: ";
+  std::cin >> numero;
+
+  int factorial = 1;
+  while (numero > 0) {
+    factorial *= numero;
+    numero--;
+  }
+
+  std::cout << "El factorial de " << numero << " es " << factorial << std::endl;
+
+  // Números impares (FOR)
+  std::cout << "\nIntroduzca un número mayor a 10 y menor que 30: ";
+  std::cin >> numero;
+
+  for (int i = 1; i <= numero; i += 2) {
+    std::cout << i << " ";
+  }
+
+  std::cout << std::endl;
+
+  // Números impares (WHILE)
+  std::cout << "\nIntroduzca un número mayor a 10 y menor que 30: ";
+  std::cin >> numero;
+
+  int i = 1;
+  while (i <= numero) {
+    if (i % 2 != 0) {
+      std::cout << i << " ";
+    }
+    i++;
+  }
+
+  std::cout << std::endl;
+
+  // Días de la semana
+  std::cout << "\nIntroduzca un número del 1 al 5: ";
+  std::cin >> dia;
+
+  switch (dia) {
+    case 1:
+      std::cout << "Lunes" << std::endl;
+      break;
+    case 2:
+      std::cout << "Martes" << std::endl;
+      break;
+    case 3:
+      std::cout << "Miércoles" << std::endl;
+      break;
+    case 4:
+      std::cout << "Jueves" << std::endl;
+      break;
+    case 5:
+      std::cout << "Viernes" << std::endl;
+      break;
+    default:
+      std::cout << "Número no válido." << std::endl;
+  }
+
+  return 0;
+}
